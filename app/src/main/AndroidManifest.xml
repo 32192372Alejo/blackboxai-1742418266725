@@ -9,6 +9,7 @@
         android:roundIcon="@drawable/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
+        
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -17,6 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".CompletionActivity"
+            android:exported="false" />
     </application>
 
     <uses-permission android:name="android.permission.CAMERA" />

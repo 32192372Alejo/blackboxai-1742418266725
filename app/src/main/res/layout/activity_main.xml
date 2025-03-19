@@ -4,16 +4,35 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:gravity="center">
+    android:background="@color/background">
+
+    <!-- Camera Preview -->
+    <FrameLayout
+        android:id="@+id/camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/black">
+        
+        <Button
+            android:id="@+id/videoResponseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="GRABAR"
+            android:textColor="@color/text_primary"
+            android:background="@color/button_background"
+            android:padding="12dp"/>
+    </FrameLayout>
 
     <TextView
         android:id="@+id/questionTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="¿Por qué quieres trabajar aquí?"
         android:textSize="20sp"
-        android:textColor="@android:color/black"
-        android:layout_marginBottom="32dp"
+        android:textColor="@color/text_primary"
+        android:layout_marginBottom="24dp"
         android:gravity="center"/>
 
     <ProgressBar
@@ -22,33 +41,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:max="100"
-        android:layout_marginBottom="32dp"/>
+        android:progressTint="@color/primary"
+        android:layout_marginBottom="24dp"/>
 
     <EditText
         android:id="@+id/responseEditText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="120dp"
         android:hint="Escribe tu respuesta aquí"
-        android:minHeight="100dp"
+        android:textColorHint="@color/text_secondary"
+        android:textColor="@color/text_primary"
         android:gravity="top"
-        android:padding="8dp"
-        android:background="@android:color/white"
-        android:layout_marginBottom="32dp"/>
+        android:padding="12dp"
+        android:background="#F5F5F5"
+        android:layout_marginBottom="24dp"/>
 
     <Button
         android:id="@+id/textResponseButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="RESPONDER EN TEXTO"
-        android:layout_marginBottom="16dp"
-        android:padding="16dp"/>
-
-    <Button
-        android:id="@+id/videoResponseButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="RESPONDER EN VIDEO"
-        android:layout_marginBottom="16dp"
+        android:textColor="@color/text_primary"
+        android:background="@color/button_background"
+        android:layout_marginBottom="12dp"
         android:padding="16dp"/>
 
     <Button
@@ -56,6 +71,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="CONTINUAR"
+        android:textColor="@color/text_primary"
+        android:background="@color/button_background"
         android:padding="16dp"/>
 
 </LinearLayout>

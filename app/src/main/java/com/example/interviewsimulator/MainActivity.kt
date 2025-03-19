@@ -43,14 +43,11 @@ class MainActivity : AppCompatActivity() {
         val continueButton: Button = findViewById(R.id.continueButton)
 
         textResponseButton.setOnClickListener {
-            // Handle text response
             val response = responseEditText.text.toString()
-            // Save or process the response
             nextQuestion()
         }
 
         videoResponseButton.setOnClickListener {
-            // Handle video response
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
                 ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CAMERA), 100)
             } else {
@@ -69,8 +66,6 @@ class MainActivity : AppCompatActivity() {
         if (currentQuestionIndex < questions.size) {
             questionTextView.text = questions[currentQuestionIndex]
             progressBar.progress = (currentQuestionIndex + 1) * 10
-        } else {
-            // Handle end of interview
         }
     }
 

@@ -71,7 +71,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun nextQuestion() {
         currentQuestionIndex++
-        loadQuestion()
+        if (currentQuestionIndex >= questions.size) {
+            val intent = Intent(this, CompletionActivity::class.java)
+            startActivity(intent)
+            finish()
+        } else {
+            loadQuestion()
+        }
     }
 
     private fun openCamera() {
